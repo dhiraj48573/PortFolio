@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Home / Portfolio -->
+  <url>
+    <loc>https://dhiraj-kumar.vercel.app/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Blog posts (SPA client-rendered, paths resolve via vercel.json rewrite) -->
+  <url>
+    <loc>https://dhiraj-kumar.vercel.app/blog/real-time-price-engine-websockets</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhiraj-kumar.vercel.app/blog/docker-cloud-run-nodejs-deployment</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhiraj-kumar.vercel.app/blog/leetcode-300-problems-journey</loc>
+    <lastmod>2025-10-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhiraj-kumar.vercel.app/blog/rbac-auth-nodejs-guide</loc>
+    <lastmod>2025-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhiraj-kumar.vercel.app/blog/ocr-pipeline-python-product-labels</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dhiraj-kumar.vercel.app/blog/college-project-to-production</loc>
+    <lastmod>2025-07-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

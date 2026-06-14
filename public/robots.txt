@@ -1,0 +1,6 @@
+# https://dhiraj-kumar.vercel.app
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+
+Sitemap: https://dhiraj-kumar.vercel.app/sitemap.xml
