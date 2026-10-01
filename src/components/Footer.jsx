@@ -1,3 +1,5 @@
+'use client';
+
 import { Mail, MessageCircle, MapPin, Phone, ArrowUp } from 'lucide-react';
 import { GithubIcon as Github, LinkedInIcon as Linkedin } from './Icons';
 import { candidate, navLinks, services } from '../data/candidate';

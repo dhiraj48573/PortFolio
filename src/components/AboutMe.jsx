@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Code2, GraduationCap, Rocket, FileText } from 'lucide-react';
 import { about, candidate } from '../data/candidate';

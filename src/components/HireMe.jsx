@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle, Zap } from 'lucide-react';
 import { services } from '../data/candidate';

@@ -7,7 +7,7 @@ on:
 
 jobs:
   web-deploy:
-    name: Deploy to Hostinger via FTP
+    name: Build Next.js & Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -20,15 +20,5 @@ jobs:
 
       - name: Install dependencies & Build
         run: |
-          cd portfolio
           npm ci
           npm run build
-
-      - name: Sync files via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./portfolio/dist/
-          server-dir: /public_html/

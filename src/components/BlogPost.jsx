@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, Tag, Copy, Check } from 'lucide-react';
 import { useState } from 'react';

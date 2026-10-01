@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { experiences } from '../data/candidate';
 import TiltCard from './TiltCard';
