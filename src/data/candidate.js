@@ -51,7 +51,7 @@ export const skills = {
 
 export const metrics = [
   { value: 300, suffix: '+', label: 'LeetCode Problems', icon: 'leetcode' },
-  { value: 9.10, suffix: '', label: 'CGPA', icon: 'cgpa', decimals: 2 },
+  { value: 8.88, suffix: '', label: 'CGPA', icon: 'cgpa', decimals: 2 },
   { value: 15, suffix: '+', label: 'Projects Shipped', icon: 'projects' },
   { value: 99, suffix: '%', label: 'Uptime — Production', icon: 'uptime' },
   { value: 25, suffix: '%', label: 'API Speedup Delivered', icon: 'speed' },
