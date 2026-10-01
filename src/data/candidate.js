@@ -7,7 +7,7 @@
 export const candidate = {
   name: 'Dhiraj Kumar',
   firstName: 'Dhiraj',
-  title: 'Software Engineer | Web Developer | AI & ML',
+  title: 'Software Developer & Full-Stack Engineer',
   photo: '/Photo-dhiru.jpg',
   email: 'dhirajsinghmichal@gmail.com',
   phone: '7004925295',
@@ -16,7 +16,16 @@ export const candidate = {
   github: 'https://github.com/dhiraj48573',
   githubUser: 'dhiraj48573',
   linkedin: 'https://www.linkedin.com/in/dhiraj-kumar-026a22280/',
-  location: 'Vardhman Jurs Country, Jwalapur, Haridwar, Uttarakhand, India',
+  leetcode: 'https://leetcode.com/u/dhiraj48573/',
+  gfg: 'https://www.geeksforgeeks.org/user/dhiraj48573/',
+  sameAs: [
+    'https://github.com/dhiraj48573',
+    'https://www.linkedin.com/in/dhiraj-kumar-026a22280/',
+    'https://leetcode.com/u/dhiraj48573/',
+    'https://www.geeksforgeeks.org/user/dhiraj48573/'
+  ],
+  location: 'Haridwar, Uttarakhand, India',
+  country: 'India',
   cgpa: 8.88,
   university: 'Gurukul Kangri (Deemed) University, Haridwar',
   degree: 'B.Tech — Computer Science & Engineering (3rd Year)',
@@ -98,6 +107,7 @@ export const experiences = [
 export const projects = [
   {
     number: '01',
+    slug: 're-life',
     name: 'ReLife — Divorce Support Platform',
     oneLiner: 'Production-grade full-stack platform with JWT RBAC, payments, and real-time groups.',
     problem: 'Divorce support lacks structured, anonymous, and scalable digital infrastructure.',
@@ -114,6 +124,7 @@ export const projects = [
   },
   {
     number: '02',
+    slug: 'cryptoquantix',
     name: 'CryptoQuantix — Paper Trading Platform',
     oneLiner: 'Multi-asset paper trading with WebSocket price engine, risk profiles, and backtesting.',
     problem: 'Aspiring traders need risk-free simulation environments with realistic market data.',
@@ -130,6 +141,7 @@ export const projects = [
   },
   {
     number: '03',
+    slug: 'smart-medical-shop',
     name: 'Smart Medical Shop — AI Health Hub',
     oneLiner: 'OCR-powered prescription digitization with drug interaction checker and voice search.',
     problem: 'Manual prescription data entry causes errors and delays in pharmacy operations.',
@@ -507,11 +519,12 @@ price = re.search(r'₹(\\d+)', text)` },
 ];
 
 export const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Work', href: '#work' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Achievements', href: '#achievements' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Contact', href: '#contact' },
-];
+  { label: 'About', href: '/#about' },
+  { label: 'Work', href: '/#work' },
+  { label: 'Experience', href: '/#experience' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Resume', href: '/resume' },
+  { label: 'Achievements', href: '/#achievements' },
+  { label: 'Skills', href: '/#skills' },
+  { label: 'Contact', href: '/#contact' },
+];

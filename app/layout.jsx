@@ -17,39 +17,35 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   metadataBase: new URL('https://dhirajkumar.me'),
   title: {
-    default: `${candidate.name} — ${candidate.title}`,
-    template: `%s | ${candidate.name}`,
+    default: 'Dhiraj Kumar | Software Developer & Full-Stack Developer',
+    template: '%s | Dhiraj Kumar',
   },
   description:
-    'Portfolio of Dhiraj Kumar — Software Engineer, Full-Stack Web Developer, and AI/ML Specialist. CGPA 8.88, 300+ LeetCode problems, 3 internships, 5+ production projects shipped.',
+    'Dhiraj Kumar is a Software Developer and Full-Stack Developer specializing in React, Node.js, MongoDB, REST APIs, Docker, WebSockets, SaaS and modern web applications in India.',
   keywords: [
     'Dhiraj Kumar',
-    'Dhiraj Kumar Portfolio',
-    'Software Engineer',
-    'Full Stack Developer',
-    'React Developer',
-    'Node.js Developer',
-    'AI ML Engineer',
-    'Gurukul Kangri University',
-    'LeetCode 300',
-    'Web Developer India',
-    'Haridwar Software Engineer',
+    'Dhiraj Kumar developer',
+    'Dhiraj Kumar software developer',
+    'Dhiraj Kumar full stack developer',
+    'Dhiraj Kumar MERN developer',
+    'Dhiraj Kumar software engineer',
+    'Dhiraj Kumar portfolio',
+    'Dhiraj Kumar India',
+    'Dhiraj Kumar React developer',
+    'Dhiraj Kumar Node.js developer',
+    'Dhiraj Kumar web developer',
+    'dhirajkumar.me',
   ],
   authors: [{ name: 'Dhiraj Kumar', url: 'https://dhirajkumar.me' }],
   creator: 'Dhiraj Kumar',
   publisher: 'Dhiraj Kumar',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   alternates: {
     canonical: 'https://dhirajkumar.me',
   },
   openGraph: {
-    title: `${candidate.name} — ${candidate.title}`,
+    title: 'Dhiraj Kumar | Software Developer & Full-Stack Developer',
     description:
-      'Explore projects, experience, technical skills, and blogs by Dhiraj Kumar. Specializing in MERN stack, WebSockets, Docker, Google Cloud Run, and AI/ML integrations.',
+      'Official personal portfolio of Dhiraj Kumar — Software Developer & Full-Stack Developer building scalable web applications with React, Node.js, WebSockets, and Docker.',
     url: 'https://dhirajkumar.me',
     siteName: 'Dhiraj Kumar Portfolio',
     images: [
@@ -57,7 +53,7 @@ export const metadata = {
         url: '/Photo-dhiru.jpg',
         width: 1200,
         height: 630,
-        alt: `${candidate.name} — Software Engineer`,
+        alt: 'Dhiraj Kumar — Software Developer & Full-Stack Engineer',
       },
     ],
     locale: 'en_US',
@@ -65,9 +61,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${candidate.name} — ${candidate.title}`,
+    title: 'Dhiraj Kumar | Software Developer & Full-Stack Developer',
     description:
-      'Full-Stack Engineer & AI/ML Specialist. 300+ LeetCode problems, 3 internships, 5+ projects shipped.',
+      'Official personal portfolio of Dhiraj Kumar — Software Developer specializing in React, Node.js, Docker & WebSockets.',
     images: ['/Photo-dhiru.jpg'],
   },
   robots: {
@@ -84,35 +80,61 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const jsonLdPerson = {
+  const jsonLdGraph = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: candidate.name,
-    jobTitle: 'Software Engineer',
-    url: 'https://dhirajkumar.me',
-    sameAs: [candidate.github, candidate.linkedin],
-    alumniOf: candidate.university,
-    knowsAbout: [
-      'Full-Stack Development',
-      'React',
-      'Node.js',
-      'Machine Learning',
-      'Artificial Intelligence',
-      'Docker',
-      'Google Cloud Platform',
-      'Data Structures and Algorithms',
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': 'https://dhirajkumar.me/#person',
+        name: candidate.name,
+        givenName: candidate.firstName,
+        jobTitle: 'Software Developer & Full-Stack Engineer',
+        description:
+          'Software Developer specializing in React, Node.js, MongoDB, WebSockets, Docker, and AI integrations.',
+        url: 'https://dhirajkumar.me/',
+        image: 'https://dhirajkumar.me/Photo-dhiru.jpg',
+        sameAs: candidate.sameAs,
+        alumniOf: {
+          '@type': 'EducationalOrganization',
+          name: candidate.university,
+        },
+        knowsAbout: [
+          'Software Development',
+          'Full-Stack Web Development',
+          'MERN Stack',
+          'React.js',
+          'Node.js',
+          'MongoDB',
+          'REST APIs',
+          'Docker',
+          'WebSockets',
+          'System Design',
+          'Data Structures and Algorithms',
+        ],
+        nationality: {
+          '@type': 'Country',
+          name: 'India',
+        },
+      },
+      {
+        '@type': 'ProfilePage',
+        '@id': 'https://dhirajkumar.me/#profilepage',
+        url: 'https://dhirajkumar.me/',
+        name: 'Dhiraj Kumar | Software Developer & Full-Stack Developer',
+        mainEntity: {
+          '@id': 'https://dhirajkumar.me/#person',
+        },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://dhirajkumar.me/#website',
+        url: 'https://dhirajkumar.me/',
+        name: 'Dhiraj Kumar Portfolio',
+        publisher: {
+          '@id': 'https://dhirajkumar.me/#person',
+        },
+      },
     ],
-  };
-
-  const jsonLdWebsite = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    url: 'https://dhirajkumar.me',
-    name: `${candidate.name} Portfolio`,
-    author: {
-      '@type': 'Person',
-      name: candidate.name,
-    },
   };
 
   return (
@@ -120,11 +142,7 @@ export default function RootLayout({ children }) {
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
         />
       </head>
       <body className="bg-[#09090B] text-[#FAFAFA] antialiased selection:bg-indigo-500/30 selection:text-white">
