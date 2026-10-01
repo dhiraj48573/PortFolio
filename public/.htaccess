@@ -1,4 +1,4 @@
-# Ensure correct MIME types for JavaScript and CSS modules
+# Ensure correct MIME types
 <IfModule mod_mime.c>
   AddType application/javascript .js .mjs
   AddType text/css .css
@@ -6,12 +6,20 @@
   AddType image/webp .webp
 </IfModule>
 
-# SPA Fallback Routing for React / Vite
+# Next.js Static Export Rewrite Rules for Hostinger
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+
+  # Serve existing files/directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Serve path.html if path exists
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*)$ /$1.html [L]
+
+  # Fallback to index.html
+  RewriteRule ^.+$ /index.html [L]
 </IfModule>

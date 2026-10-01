@@ -1,5 +1,7 @@
 import { blogPosts, projects } from '@/src/data/candidate';
 
+export const dynamic = 'force-static';
+
 export default async function sitemap() {
   const baseUrl = 'https://dhirajkumar.me';
 

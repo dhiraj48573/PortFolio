@@ -4,6 +4,12 @@ import BlogPost from '@/src/components/BlogPost';
 import Nav from '@/src/components/Nav';
 import Footer from '@/src/components/Footer';
 
+export async function generateStaticParams() {
+  return blogPosts.map((p) => ({
+    slug: p.slug,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
